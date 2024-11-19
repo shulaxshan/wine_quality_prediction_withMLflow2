@@ -40,9 +40,9 @@ class DataIngestion:
             logging.error(e)
 
 
-if __name__ == "__main__":
-    data_ingestion=DataIngestion()
-    final_data_path = data_ingestion.initiate_data_ingestion()
+# if __name__ == "__main__":
+#     data_ingestion=DataIngestion()
+#     final_data_path = data_ingestion.initiate_data_ingestion()
 
 #     data_transform = DataTransformation()
 #     selected_df_daily,selected_df_weekly,selected_df_monthly, max_date = data_transform.data_preprocessor(final_data_path)
