@@ -12,7 +12,7 @@ class DataIngestionTrainingPipeline:
 
     def main(self):
         data_ingestion= DataIngestion()
-        final_data_path = data_ingestion.initiate_data_ingestion()
+        data_ingestion.initiate_data_ingestion()
 
 
 if __name__ == '__main__':

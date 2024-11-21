@@ -10,7 +10,6 @@ from dataclasses import dataclass
 @dataclass
 class DataIngestionConfig:
     final_data_path: str=os.path.join('artifacts/data_ingestion',"final_data.csv")
-    # category_data_path: str=os.path.join('artifacts/data_ingestion',"category_data.csv")
 
 
 class DataIngestion:
@@ -44,9 +43,4 @@ class DataIngestion:
 #     data_ingestion=DataIngestion()
 #     final_data_path = data_ingestion.initiate_data_ingestion()
 
-#     data_transform = DataTransformation()
-#     selected_df_daily,selected_df_weekly,selected_df_monthly, max_date = data_transform.data_preprocessor(final_data_path)
-
-#     model_trainer =ModelTraining()
-#     model_trainer.initiate_model_forecast(selected_df_weekly,max_date)
 
