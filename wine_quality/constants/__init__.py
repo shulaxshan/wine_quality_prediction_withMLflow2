@@ -2,11 +2,6 @@ import os
 import urllib.parse
 from pathlib import Path
 
-# CONFIG_FILE_PATH = Path("config/config.yaml")
-# SCHEMA_FILE_PATH = Path("schema.yaml")
-# PARAMS_FILE_PATH = Path("params.yaml")
-# STATS_FILE_PATH: str = Path("artifacts/report.yaml")
-
 
 """
 Data Validation realted contant start with DATA_VALIDATION VAR NAME
@@ -25,3 +20,13 @@ DATA_INGESTED_DIR: str ="artifacts/data_ingestion/final_data.csv"
 Data transformations
 """
 DATA_TRANSFORM_DIR = "artifacts/data_ingestion/final_data.csv"
+
+
+"""
+Model Trainer
+"""
+PARAM_FILE_PATH = Path("parameter.yaml")
+MODEL_TRAINER_DIR = "artifacts/model_trainer"
+MODEL_TRAIN_DATA_PATH = "artifacts/data_transformation/train_data.csv"
+MODEL_TEST_DATA_PATH = "artifacts/data_transformation/test_data.csv"
+MODEL_PATH = "artifacts/model_trainer/model.joblib"

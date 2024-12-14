@@ -4,11 +4,13 @@ import numpy as np
 import dill
 import yaml
 import pickle
+import joblib
 from pandas import DataFrame
 from pathlib import Path
 import json
 from wine_quality.exception import CustomException
 from wine_quality.logger import logging
+from typing import Any
 
 
 
@@ -42,4 +44,23 @@ def load_json(path: Path):
 
     logging.info(f"json file loaded succesfully from: {path}")
     return content
+
+
+
+def save_bin(obj, file_path):
+    try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path,exist_ok=True)
+        with open(file_path, 'wb') as file_obj:
+            joblib.dump(obj, file_obj)
+        logging.info(f"binary file saved at: {file_path}")
+    except Exception as e:
+        raise CustomException(e,sys)
+
+
+
+def load_bin(path: Path) -> Any:
+    data = joblib.load(path)
+    logging.info(f"binary file loaded from: {path}")
+    return data
 
