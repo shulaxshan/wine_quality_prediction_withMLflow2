@@ -43,3 +43,5 @@ class ModelTrainer:
         
         save_bin(lr,self.model_trainer_config.model_obj_file_path)
         logging.info("Model Trainer completed successfully and saved the trained model")
+
+        return self.model_trainer_config.model_obj_file_path
